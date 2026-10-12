@@ -1,0 +1,2150 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>بیلان عملکرد مرکز چاپ و نشر شهید علیخانی</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            background: linear-gradient(rgba(119, 157, 233, 0.85), rgba(25, 21, 83, 0.7)),
+        url('bcm2.png') center center / cover no-repeat;
+        }
+        .header-section {
+            background: url('h2.png') no-repeat center center;
+            background-size: cover; /* برای اینکه کل هدر را پر کند */
+            color: white;
+            padding: 0px;
+            margin-bottom: 50px;
+            border-radius: 0 0 20px 20px;
+            height: 200px; /* ارتفاع دقیق بر اساس طراحی تو */
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(1,1,1,1.1); /* یک سایه ملایم برای عمق دادن */
+        }
+        .stats-card1 {
+           background: 
+        linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 255, 0, 0.7)),
+        url('bcm.png') center center / cover no-repeat;
+            color: white;
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.99);
+        }
+        .stats-card2 {
+            background: 
+        linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 255, 0.7)),
+        url('bcmn.png') center center  / cover no-repeat;
+            color: white;
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.99);
+        }
+        .stats-card3 {
+            background: 
+        linear-gradient(rgba(0, 0, 0, 0.85), rgba(255, 255, 0, 0.8)),
+        url('bcm1.png') center center / cover no-repeat;
+            color: white;
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.99);
+        }
+        .stats-card4 {
+             background: 
+        linear-gradient(rgba(0, 0, 0, 0.85), rgba(255, 0, 0, 0.7)),
+        url('bcmm1.png') center center / cover no-repeat;
+            color: white;
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.99);
+        }
+        .table-container {
+            background: linear-gradient(rgba(145, 97, 184, 0.8), rgba(0, 0, 0, 0.8)),
+        url('acc.png') center center / cover no-repeat;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(255, 255, 255, 0.99);
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+        .btn-action {
+            border-radius: 50px;
+            padding: 10px 25px;
+            margin: 5px;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            color: white;
+            border: none;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+        .btn-action:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        .table th, .table td {
+            vertical-align: middle;
+            text-align: center;
+        }
+        .form-control-sm {
+            font-size: 12px;
+            padding: 5px 8px;
+        }
+        .total-row {
+            background-color: #e3f2fd;
+            font-weight: bold;
+        }
+        .login-section {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)),
+        url('bh1.png') center center / cover no-repeat;
+        background-attachment: fixed;
+
+        }
+        /*لاگین کارت جدید */
+        .login-card {
+    width: 100%;
+    max-width: 420px;
+
+    /* افکت شیشه‌ای */
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+
+    /* ظاهر */
+    border-radius: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+
+    /* فاصله داخلی */
+    padding: 35px;
+
+    /* سایه */
+    box-shadow:
+        0 8px 32px rgba(0, 0, 0, 0.25),
+        inset 0 1px 1px rgba(255,255,255,0.2);
+
+    /* جابه‌جایی به راست */
+    transform: translateX(480px);
+
+    /* انیمیشن نرم */
+    transition: all 0.3s ease;
+    animation: loginFadeUp 1s ease;
+    position: relative;
+    z-index: 1;
+}
+.login-card:hover {
+    transform: translateX(120px) translateY(-4px);
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.35),
+        inset 0 1px 1px rgba(255,255,255,0.3);
+}
+.login-card h3,
+.login-card label {
+    color: #ffffff;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.4);
+}
+.login-card .form-control {
+    background: rgba(255,255,255,0.2);
+    border: 1px solid rgba(255,255,255,0.25);
+    color: #ffffff;
+    border-radius: 12px;
+    padding: 12px;
+}
+
+.login-card .form-control::placeholder {
+    color: rgba(255,255,255,0.7);
+}
+
+.login-card .form-control:focus {
+    background: rgba(255,255,255,0.25);
+    border-color: rgba(255,255,255,0.5);
+    box-shadow: 0 0 0 0.2rem rgba(255,255,255,0.15);
+    color: #ffffff;
+}
+
+       
+       /* لاگین کارت قبلیر  .login-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 40px;
+            max-width: 400px;
+            width: 100%;
+            margin-left: 870px;
+        } */
+        .btn-login {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border: none;
+            border-radius: 50px;
+            padding: 12px 40px;
+            transition: all 0.3s ease;
+        }
+        .btn-login:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            .btn-action:hover {
+    color: #fff !important;
+}
+        }
+        .main-content {
+            display: none;
+        }
+        .main-content.active {
+            display: block;
+        }
+        .no-letter {
+    color: red !important;
+    font-weight: bold;
+}
+        .footer {
+            text-align: center;
+             background: linear-gradient(rgba(2, 3, 71, 0.7), rgba(71, 62, 194, 0.7)),
+        url('acc.png') center center / cover no-repeat;
+            margin-top: 50px;
+            border-top: 1px solid #eee;
+            color: #ffffff;
+        }
+        .footer h4 {
+  text-shadow:
+    0 0 5px rgba(25, 135, 84, 0.5),
+    0 0 10px rgba(25, 135, 84, 0.5),
+    0 0 15px rgba(25, 135, 84, 0.99);
+}
+
+        /* کارت شیشه‌ای کاربر */
+.user-glass-card {
+    background: rgba(255, 255, 255, 0.15); /* رنگ سفید نیمه شفاف */
+    backdrop-filter: blur(12px); /* افکت تاری شیشه */
+    -webkit-backdrop-filter: blur(12px); /* پشتیبانی برای مرورگرهای اپل */
+    border: 1px solid rgba(255, 255, 255, 0.25); /* لبه باریک و براق شیشه */
+    border-radius: 12px;
+    padding: 8px 18px;
+    margin-bottom: 5px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.15); /* سایه نرم زیر کارت */
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    transition: all 0.3s ease;
+}
+
+/* افکت هاور روی کارت شیشه‌ای */
+.user-glass-card:hover {
+    background: rgba(255, 255, 255, 0.22);
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
+.user-info-text {
+    color: #ffffff;
+    font-size: 0.9rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* دکمه خروج شیشه‌ای هماهنگ */
+.btn-glass-logout {
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: #ffffff;
+    padding: 4px 12px;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.btn-glass-logout:hover {
+    background: #ffffff;
+    color: #764ba2; /* تغییر رنگ متن به بنفش هنگام هاور */
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
+}
+/* عنوان اصلی */
+.login-card h2 {
+    color: #ffffff !important;
+    font-weight: 700;
+    text-shadow: 0 3px 8px rgba(0,0,0,0.6);
+}
+
+/* توضیح زیر عنوان */
+.login-card p {
+    color: rgba(255,255,255,0.9) !important;
+}
+
+/* متن سبز راهنما */
+.login-card .text-success {
+    color: #b9ffb9 !important;
+}
+
+/* متن های پایین کارت */
+.login-card small {
+    color: rgba(255,255,255,0.85) !important;
+}
+
+/* لیبل فیلدها */
+.login-card label {
+    color: #ffffff;
+    font-weight: 500;
+}
+
+/* متن داخل input */
+.login-card .form-control {
+    color: #ffffff;
+}
+
+/* placeholder */
+.login-card .form-control::placeholder {
+    color: rgba(255,255,255,0.7);
+}
+.login-card {
+    text-shadow: 0px 2px 6px rgba(0,0,0,0.5);
+}
+.login-card {
+    position: relative;
+    z-index: 1;
+}
+
+/* هاله نور پشت کارت */
+.login-card::before {
+    content: "";
+    position: absolute;
+    inset: -40px;
+    background: radial-gradient(circle, rgba(118,75,162,0.45) 0%, rgba(118,75,162,0.15) 40%, transparent 70%);
+    filter: blur(40px);
+    z-index: -1;
+}
+@keyframes glowPulse {
+    0% { opacity: 0.7; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.05); }
+    100% { opacity: 0.7; transform: scale(1); }
+}
+
+.login-card::before {
+    animation: glowPulse 6s ease-in-out infinite;
+}
+/* انیمیشن ورود کارت */
+@keyframes loginFadeUp {
+    from {
+        opacity: 0;
+        transform: translateX(120px) translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(120px) translateY(0);
+    }
+}
+.glow-green {
+    text-shadow: 0 0 8px rgba(25, 135, 84, 0.6);
+}
+
+.glow-blue {
+    text-shadow: 0 0 8px rgba(13, 110, 253, 0.6);
+}
+.glow-white {
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+}
+.glow-black {
+    text-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
+}
+.glow-red {
+    text-shadow: 0 0 8px rgba(255, 0, 0, 0.6);
+}
+/* اصلاح ظاهر کلی فوتر برای فاصله بهتر */
+.footer {
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 50px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1); /* یک خط جداکننده محو */
+}
+.btn-action:hover {
+    color: #000000 !important;
+}
+
+/* ===== پنل تنظیم ابعاد چاپ بنر ===== */
+#bannerCalcPanel {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 1050;
+  width: 190px;
+}
+
+#bannerCalcToggle {
+  background: oklch(52% 0.18 250);
+  color: #fff;
+  border: none;
+  border-radius: 10px 10px 0 0;
+  padding: 8px 16px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  width: 100%;
+  text-align: right;
+  font-family: inherit;
+}
+
+#bannerCalcToggle:hover {
+  background: oklch(42% 0.18 250);
+}
+
+#bannerCalcBody {
+  background: oklch(100% 0 0);
+  border: 1.5px solid oklch(87% 0.01 250);
+  border-top: none;
+  border-radius: 0 0 10px 10px;
+  padding: 16px;
+  box-shadow: 0 4px 16px oklch(18% 0.015 250 / 0.12);
+  display: none;
+}
+
+#bannerCalcBody.open { display: block; }
+
+#bannerCalcBody .bc-field {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 12px;
+}
+
+#bannerCalcBody .bc-label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: oklch(55% 0.015 250);
+}
+
+#bannerCalcBody .bc-input-row {
+  display: flex;
+  align-items: center;
+  border: 1.5px solid oklch(87% 0.01 250);
+  border-radius: 8px;
+  overflow: hidden;
+  background: oklch(100% 0 0);
+  transition: border-color 0.15s;
+}
+
+#bannerCalcBody .bc-input-row:focus-within {
+  border-color: oklch(52% 0.18 250);
+  box-shadow: 0 0 0 3px oklch(52% 0.18 250 / 0.12);
+}
+
+#bannerCalcBody .bc-input-row input {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 8px 10px;
+  font-size: 0.9rem;
+  background: transparent;
+  color: oklch(18% 0.015 250);
+  text-align: right;
+  min-width: 0;
+  font-family: inherit;
+}
+
+#bannerCalcBody .bc-unit {
+  padding: 8px 8px 8px 4px;
+  font-size: 0.75rem;
+  color: oklch(55% 0.015 250);
+  white-space: nowrap;
+  user-select: none;
+}
+
+#bannerCalcBody .bc-toggle-group {
+  display: flex;
+  border: 1.5px solid oklch(87% 0.01 250);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+#bannerCalcBody .bc-toggle-group label {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 7px 6px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  color: oklch(55% 0.015 250);
+  transition: background 0.12s, color 0.12s;
+  border-left: 1px solid oklch(87% 0.01 250);
+}
+
+#bannerCalcBody .bc-toggle-group label:last-child { border-left: none; }
+#bannerCalcBody .bc-toggle-group input[type="radio"] { display: none; }
+
+#bannerCalcBody .bc-toggle-group label.bc-active-plus {
+  background: oklch(95% 0.05 25);
+  color: oklch(55% 0.2 25);
+}
+
+#bannerCalcBody .bc-toggle-group label.bc-active-minus {
+  background: oklch(94% 0.05 160);
+  color: oklch(52% 0.16 160);
+}
+
+#bannerCalcBody .bc-result {
+  background: oklch(93% 0.06 250);
+  border: 1.5px solid oklch(52% 0.18 250);
+  border-radius: 8px;
+  padding: 12px 14px;
+  margin-top: 4px;
+  transition: opacity 0.2s;
+}
+
+#bannerCalcBody .bc-result.bc-empty { opacity: 0.4; }
+
+#bannerCalcBody .bc-result-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: oklch(42% 0.18 250);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+#bannerCalcBody .bc-result-value {
+  font-size: 1rem;
+  font-weight: 800;
+  color: oklch(42% 0.18 250);
+  line-height: 1.2;
+  margin-top: 2px;
+}
+
+#bannerCalcBody .bc-result-sub {
+  font-size: 0.58rem;
+  color: oklch(52% 0.18 250);
+  margin-top: 3px;
+}
+/* ===== پایان پنل تنظیم ابعاد ===== */
+    </style>
+</head>
+<body>
+    <!-- بخش ورود -->
+    <div id="loginSection" class="login-section">
+        <div class="login-card">
+            <div class="text-center mb-4">
+                <h2 class="text-primary" >سیـستم بیـلان عملـکرد </h2>
+                <p class="mb-1">مـرکـز چـاپ و نـشر شهـید حسیـن علیخانـی</p>
+                <p class="mb-3">(شهرداری کرمانشاه)</p>
+                <small class="text-success">تجربه بهتر با Firefox | بدون نیاز به اینترنت</small>
+            </div>
+            
+            <div id="loginError" class="alert alert-danger d-none"></div>
+            
+            <form id="loginForm">
+                <div class="mb-3">
+                    <label for="username" class="form-label">نام کاربری</label>
+                    <input type="text" class="form-control" id="username" required>
+                </div>
+                
+                <div class="mb-4">
+                    <label for="password" class="form-label">رمز عبور</label>
+                    <input type="password" class="form-control" id="password" required>
+                </div>
+                
+                <div class="d-grid">
+                    <button type="submit" class="btn btn-primary btn-login text-white">ورود به سیستم</button>
+                </div>
+            </form>
+            
+            <div class="mt-4 text-center">
+                <small class="text-muted">
+                    نام کاربری: <strong>markazchap</strong><br>
+                    رمز عبور: <strong>کلمه عبور را وارد کنید</strong><br>
+                     طراحی و توسعه : <strong>پرهام سهولی</strong>
+                </small>
+            </div>
+        </div>
+       
+    </div>
+
+    <!-- محتوای اصلی -->
+    <div id="mainContent" class="main-content">
+        <!-- Header -->
+        <div class="header-section">
+            <div class="container ">
+                <div class="row align-items-end h-100 pb-3">
+                    <div class="col">
+                      <!--  <h1><i class="fas fa-clipboard-list me-2"></i>مرکز چاپ و نشر شهید حسین علیخانی(شهرداری کرمانشاه)</h1>
+                       // <p class="mb-0">متولیان صنعت چاپ، سربازان خط مقدم مبارزه با تهاجم فرهنگی دشمنان هستند. «مقام معظم رهبری»</p> -->
+                    </div>
+                    <div class="col-auto user-glass-card ">
+                <span class="me-3 user-info-text glow-black">
+                    <i class="fas fa-user-circle me-1"></i>
+                    کاربر: <span id="currentUser" class="fw-bold">markazchap</span>
+                </span>
+                <button class="btn btn-glass-logout btn-sm" onclick="logout()">
+                    <i class="fas fa-sign-out-alt me-1"></i> خروج
+                </button>
+            </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- آمار کلی -->
+        <div class="container mb-4">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="stats-card1 glow-black">
+                        <h4 id="totalOutput">0</h4>
+                        <p>کل تحویلی (متر)</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="stats-card2 glow-black">
+                        <h4 id="totalInput">0</h4>
+                        <p>کل دریافتی (متر)</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="stats-card3 glow-black">
+                        <h4 id="totalBanners">0</h4>
+                        <p>کل بنرها (تخته)</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="stats-card4 glow-black">
+                        <h4 id="inventory">0</h4>
+                        <p>موجودی (متر)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <!-- جدول خروجی -->
+            <div class="table-container">
+                <div class="d-flex flex-column mb-3">
+                    <!-- 🔽 فیلتر نمایش -->
+        <div class="col-auto user-glass-card" style="display:flex; align-items:center; gap:8px; margin:8px 0; flex-wrap:wrap;">
+            <h6 class="mb-0 text-danger glow-white" style="white-space:nowrap;">
+                <i class="fas fa-filter me-1"></i> <b>جستجوی سریع</b>
+            </h6>
+                          <label>درخواست‌دهنده:</label>
+  <input type="text" id="quickFilterRequester" class="form-control form-control-sm glow-white " 
+         placeholder="همه" style="width:100px; text-align:center;"list="requesterList"> 
+         <label>موضوع:</label>
+  <input type="text" id="quickFilterSubject" class="form-control form-control-sm glow-white" 
+         placeholder="همه" style="width:100px; text-align:center;"list="subjectList"> 
+         <label>شماره نامه:</label>
+  <input type="text" id="quickFilterLetterNumber" class="form-control form-control-sm glow-white" 
+         placeholder="همه" style="width:100px; text-align:center;"list="shomarenameList">
+         <label><b>تاریخ چاپ:</b> از تاریخ</label>
+                          <input type="text" id="filterStartDate" class="form-control form-control-sm glow-white" 
+                          placeholder="۱۴۰۴/۰۷/۰۱" style="width:90px;text-align:center;">
+                          <label>تا تاریخ</label>
+                          <input type="text" id="filterEndDate" class="form-control form-control-sm glow-white" 
+                          placeholder="۱۴۰۴/۰۷/۳۰" style="width:90px;text-align:center;">
+
+                          <button id="applyDateFilterBtn" class="btn-glass-logout glow-white">اعمال فیلتر</button>
+                          <button id="clearDateFilterBtn" class="btn btn-sm btn-outline-danger">X</button>
+                         </div>
+                         <h4></h4>
+                         <h4 class="text-white glow-black" ><i class="fas fa-arrow-up text-success me-2"></i>بیلان عملکرد (خروجی)</h4>
+                 </div>
+                    <div class="table-responsive">
+                    <table class="table table-striped" id="outputTable">
+                        <thead class="table-primary">
+                            <tr>
+                                <th>ردیف</th>
+                                <th>طول</th>
+                                <th>عرض</th>
+                                <th>تعداد</th>
+                                <th>متراژ</th>
+                                <th>درخواست دهنده</th>
+                                <th>موضوع</th>
+                                <th>توضیحات</th>
+                                <th>تحویل گیرنده</th>
+                                <th>تاریخ چاپ<span id="sortPrintDateBtn" style="cursor:pointer;">🔽</span></th>
+                                <th>شماره نامه</th>
+                                <th>تاریخ ثبت</th>
+                            </tr>
+                        </thead>
+                        <tbody id="outputTableBody">
+                            <!-- جدول از جاوا اسکریپت تولید می‌شود -->
+                        </tbody>
+                        <tfoot class="total-row">
+                            
+                            <tr>
+                                <td colspan="5"><strong>جمع کل</strong></td>
+                                <td><input type="text" id="totalOutputCount" class="form-control text-center" readonly></td>
+                                <td><input type="text" id="totalOutputArea" class="form-control text-center" readonly></td>
+                                <td colspan="5"></td>
+                            </tr>
+                        </tfoot>
+                        <tr id="addOutputRowBtnRow"> <!-- دکمه های زیر تیبل خروجی _____________________-->
+  <td colspan="12">
+    <div class="d-flex justify-content-between align-items-center">
+
+      <!-- سمت راست: حالت نمایش -->
+      <div class="text-end">
+        <span class="me-2">حالت نمایش:</span>
+
+        <div class="btn-group btn-group-sm" role="group">
+          <button type="button" class="btn btn-outline-secondary"
+          onclick="bannerSystem.showAllRows()">همه</button>
+          <button type="button" class="btn btn-outline-secondary"
+          onclick="bannerSystem.setRowLimit(10)">10</button>
+          <input
+            type="number"
+            class="form-control form-control-sm"
+            placeholder="تعداد ردیف"
+            min="1"
+            style="width: 100px;"
+            onchange="bannerSystem.setCustomRowLimit(this.value)"
+          >
+                    
+        </div>
+      </div>
+
+      <!-- سمت چپ: دکمه‌های قبلی -->
+      <div class="text-start">
+        <button class="btn btn-outline-success btn-sm" onclick="bannerSystem.addOutputRow()">➕ افزودن ردیف</button>
+        <button class="btn btn-outline-secondary btn-sm" onclick="bannerSystem.repeatLastOutputRow()"> تکرار ردیف</button>
+        <button class="btn btn-outline-danger btn-sm" onclick="bannerSystem.removeOutputRow()">🗑 حذف ردیف</button>
+        <button class="btn btn-success btn-action" onclick="bannerSystem.saveOutputData()">
+          <i class="fas fa-save me-1"></i> ثبت
+        </button>
+      </div>
+
+    </div>
+  </td>
+</tr>
+                    </table>
+                </div>
+            </div>
+
+            <!-- جدول ورودی -->
+            <div class="table-container">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <h4 class="text-white glow-black"><i class="fas fa-arrow-down text-primary me-2"></i>بنر دریافت شده (ورودی)</h4>
+                </div>
+                
+                <div class="table-responsive">
+                    <table class="table table-striped" id="inputTable">
+                        <thead class="table-success">
+                            <tr>
+                                <th>ردیف</th>
+                                <th>طول</th>
+                                <th>عرض</th>
+                                <th>تعداد</th>
+                                <th>متراژ</th>
+                                <th>تاریخ دریافت</th>
+                                <th>تحویل دهنده</th>
+                            </tr>
+                        </thead>
+                        <tbody id="inputTableBody">
+                            <!-- جدول از جاوا اسکریپت تولید می‌شود -->
+                        </tbody>
+                        <tfoot class="total-row">
+                            <tr>
+                                <td colspan="3"><strong>جمع کل</strong></td>
+                                <td><input type="text" id="totalInputCount" class="form-control text-center" readonly></td>
+                                <td><input type="text" id="totalInputArea" class="form-control text-center" readonly></td>
+                                <td colspan="2"></td>
+                            </tr>
+                        </tfoot>
+                        <tr id="addInputRowBtnRow"> <!-- دکمه های زیر تیبل ورودی _____________________-->
+  <td colspan="7">
+    <div class="d-flex justify-content-between align-items-center">
+
+      
+
+      <!-- حالت نمایش -->
+      <div class="d-flex align-items-center gap-2">
+        <div class="text-end">
+        <span class="me-2">حالت نمایش:</span>
+        <div class="btn-group btn-group-sm" role="group">
+        <button type="button"
+        class="btn btn-outline-secondary btn-sm"
+        onclick="bannerSystem.showAllInputRows()">همه</button>
+
+        <button type="button"
+        class="btn btn-outline-secondary btn-sm"
+        onclick="bannerSystem.setInputRowLimit(10)">10</button>
+
+        <input
+          type="number"
+          class="form-control form-control-sm"
+          placeholder="تعداد ردیف"
+          min="1"
+          style="width: 100px;"
+          onchange="bannerSystem.setCustomInputRowLimit(this.value)"
+        >
+        </div>
+        </div>
+
+      </div>
+      <!-- دکمه‌های اصلی -->
+       
+      
+        <div class="text-start">
+        <button class="btn btn-outline-primary btn-sm"
+        onclick="bannerSystem.addInputRow()">➕ افزودن ردیف</button>
+        <button class="btn btn-outline-secondary btn-sm" onclick="bannerSystem.repeatLastInputRow()"> تکرار ردیف</button>
+        <button class="btn btn-outline-danger btn-sm" onclick="bannerSystem.removeInputRow()">🗑 حذف ردیف</button>
+
+        <button class="btn btn-primary btn-action"
+        onclick="bannerSystem.saveInputData()">
+          <i class="fas fa-save me-1"></i> ثبت
+        </button>
+      </div>
+
+    </div>
+  </td>
+</tr>
+                    </table>
+                </div>
+            </div>
+
+            <!-- دکمه‌های عملیاتی -->
+            <div class="text-center mb-4">
+                <button class="btn btn-info btn-action" onclick="showReportModal()">
+                    <i class="fas fa-file-pdf me-1"></i> ایجاد  گزارش
+                </button>
+                <button class="btn btn-warning btn-action" onclick="showFilterModal()">
+                    <i class="fas fa-filter me-1"></i>جستجوی داده
+                </button>
+                <button class="btn btn-login btn-action" onclick="bannerSystem.backupData()">
+                    <i class="fas fa-download me-1"></i> پشتیبان گیری
+                </button>
+                <button class="btn btn-success btn-action" onclick="restoreData()">
+                    <i class="fas fa-upload me-1"></i> بازیابی اطلاعات
+                </button>
+                <button class="btn btn-danger btn-action" onclick="bannerSystem.clearAllData()">
+                    <i class="fas fa-trash me-1"></i> حذف داده‌ها
+                </button>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+    <h4 class="text-success glow-white">تقدیم به روح شهید اهل قلم <b class="text-danger glow-black">شهیـد حسیـن علیخـانی </b>و تمامی شهدای مدافع حرم </h4>
+    <h5 class="text-white glow-black flex items-center justify-center gap-2 flex-wrap text-sm">
+  <span>طراحی و توسعه : پرهام سهولی</span>
+    <a 
+    href="https://eitaa.com/psohii" 
+    target="_blank" 
+    rel="noopener noreferrer"
+    class="inline-flex items-center gap-1 text-xs text-white hover:text-green-300 transition duration-200"
+  >
+   <span class="text-muted glow-white"><small>ارسال پیام</small></span>
+  </a>
+</h5>
+    <h6 class="text-primary">سیستم بیلان عملکرد مرکز چاپ و نشر - نسخه 03 آفلاین</h6>
+    <p class="text-primary glow-black">
+        <small>تمام داده‌ها در این مرورگر ذخیره می‌شود لذا برای اطمینان از حفظ داده ها از دکمه ی "پشتیبان گیری" استفاده نمایید</small>
+    </p>
+</div>
+    </div>
+
+    <!-- مودال گزارش رسمی -->
+    <div class="modal fade" id="reportModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">ایجاد گزارش رسمی</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label class="form-label">تاریخ شروع</label>
+                        <input type="text" class="form-control" id="reportStartDate" placeholder="1404/05/01">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">تاریخ پایان</label>
+                        <input type="text" class="form-control" id="reportEndDate" placeholder="1404/05/30">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">نوع خروجی</label>
+                        <select class="form-control" id="reportType">
+                            <option value="text">متن (جهت چاپ)</option>
+                            <option value="pdf">PDF (جهت مشاهده)</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">انصراف</button>
+                    <button type="button" class="btn btn-primary" onclick="generateReport()">تولید گزارش</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- مودال فیلتر -->
+    <div class="modal fade" id="filterModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">گزارش‌ گیری با فیلتر</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">درخواست دهنده</label>
+                            <select class="form-control" id="filterRequester">
+                                <option value="">همه</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">موضوع</label>
+                            <select class="form-control" id="filterSubject">
+                                <option value="">همه</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">تحویل گیرنده</label>
+                            <select class="form-control" id="filterReceiver">
+                                <option value="">همه</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">شماره نامه</label>
+                            <select class="form-control" id="filtershomarename">
+                                <option value="">همه</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                          <label class="form-label">از تاریخ چاپ</label>
+                          <input type="text" class="form-control" id="filterPrintStart" placeholder="1404/05/01">
+                        </div>
+                        <div class="col-md-6 mb-3">
+                        <label class="form-label">تا تاریخ چاپ</label>
+                        <input type="text" class="form-control" id="filterPrintEnd" placeholder="1404/05/30">
+                        </div>
+                    </div>
+                    <div id="filterResults"></div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-warning" onclick="resetFilter()">پاک کردن فیلتر</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">انصراف</button>
+                    <button type="button" class="btn btn-primary" onclick="applyFilter()">اعمال فیلتر</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- فایل ورودی برای بازیابی بکاپ -->
+    <input type="file" id="restoreInput" accept=".json" style="display: none;" onchange="handleRestoreFile(event)">
+
+    <!-- لیست‌های auto-complete -->
+    <datalist id="requesterList"></datalist>
+    <datalist id="subjectList"></datalist>
+    <datalist id="receiverList"></datalist>
+    <datalist id="supplierList"></datalist>
+    <datalist id="shomarenameList"></datalist>
+<!-- پنل تنظیم ابعاد چاپ بنر -->
+<div id="bannerCalcPanel">
+  <button id="bannerCalcToggle" onclick="toggleBannerCalc()">🖨️ تنظیم ابعاد بنر ▲</button>
+  <div id="bannerCalcBody">
+
+    <div class="bc-field">
+      <span class="bc-label">پرینتر چقدر خطا دارد؟</span>
+      <div class="bc-toggle-group">
+        <label id="bc-lbl-plus" for="bc-dir-plus" class="bc-active-plus">
+          <input type="radio" name="bc-dir" id="bc-dir-plus" value="plus" checked>
+          ➕ 
+        </label>
+        <label id="bc-lbl-minus" for="bc-dir-minus">
+          <input type="radio" name="bc-dir" id="bc-dir-minus" value="minus">
+          ➖ 
+        </label>
+      </div>
+    </div>
+
+    <div class="bc-field">
+      <span class="bc-label">مقدار خطا در هر متر</span>
+      <div class="bc-input-row">
+        <input type="number" id="bc-errVal" min="0" step="0.1"
+               placeholder="مثلاً ۲۲" inputmode="decimal">
+        <span class="bc-unit">mm / m</span>
+      </div>
+    </div>
+
+    <div class="bc-field">
+      <span class="bc-label">اندازه هدف طرح</span>
+      <div class="bc-input-row">
+        <input type="number" id="bc-targetVal" min="0" step="0.1"
+               placeholder="مثلاً ۱۵۰" inputmode="decimal">
+        <span class="bc-unit">سانتی‌متر</span>
+      </div>
+    </div>
+
+    <div class="bc-result bc-empty" id="bc-resultBox">
+      <div class="bc-result-label">:Height image size</div>
+      <div class="bc-result-value" id="bc-resultVal">—</div>
+      <div class="bc-result-sub" id="bc-resultSub">عدد را وارد کنید</div>
+    </div>
+
+  </div>
+</div>
+<!-- پایان پنل تنظیم ابعاد -->
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+
+    <script>
+// سیستم احراز هویت
+document.getElementById('loginForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+    
+    if (username === 'markazchap' && password === '123') {
+        localStorage.setItem('userLoggedIn', 'true');
+        document.getElementById('loginSection').style.display = 'none';
+        document.getElementById('mainContent').classList.add('active');
+        initializeSystem();
+    } else {
+        const errorDiv = document.getElementById('loginError');
+        errorDiv.textContent = 'نام کاربری یا رمز عبور اشتباه است';
+        errorDiv.classList.remove('d-none');
+    }
+});
+
+function logout() {
+    if (confirm('آیا می‌خواهید از سیستم خارج شوید؟')) {
+        localStorage.removeItem('userLoggedIn');
+        location.reload();
+    }
+}
+
+function checkLogin() {
+    if (localStorage.getItem('userLoggedIn') === 'true') {
+        document.getElementById('loginSection').style.display = 'none';
+        document.getElementById('mainContent').classList.add('active');
+        initializeSystem();
+    }
+}
+
+// بارگذاری اولیه
+checkLogin();
+
+// سیستم مدیریت بنر
+class BannerSystem {
+    constructor() {
+        // داده‌های ذخیره شده در localStorage
+        this.outputData = JSON.parse(localStorage.getItem('outputData')) || [];
+        this.inputData  = JSON.parse(localStorage.getItem('inputData')) || [];
+        // اضافه کن
+
+        // 🔽 این دو خط جدید رو اینجا اضافه کن 🔽
+        this.sortOrder = 'asc';         // جهت اولیه مرتب‌سازی
+        this.sortBtnAttached = false;   // فقط یک بار listener به دکمه اضافه میشه
+        this.rowLimit = 10; //تعداد ردیف های قابل نمایش
+        this.inputRowLimit = 10; // تعداد ردیف‌های قابل نمایش جدول ورودی
+    }
+
+    init() {
+        // ✅ اول متراژها دوباره محاسبه شود
+    this.recalculateAllAreas();
+
+    // ✅ بعد جدول ساخته شود
+    this.generateOutputTable();
+    const tbody = document.getElementById('outputTableBody');
+    if (tbody && !tbody.dataset.calendarBound) {
+        tbody.addEventListener('click', function (e) {
+            if (
+                e.target.matches('input[data-date-field="printDate"]') ||
+                e.target.matches('input[data-date-field="tarikhesabt"]')
+            ) {
+                showCalendar(e.target);
+            }
+        });
+
+        tbody.dataset.calendarBound = 'true';
+    }
+    this.generateInputTable();
+
+    // ✅ بعد مجموع‌ها و آمار
+    this.updateStats();
+    this.loadDropdownOptions();
+    }
+// تولید جدول خروجی
+generateOutputTable() {
+    const tbody = document.getElementById('outputTableBody');
+    tbody.innerHTML = '';
+
+    // تعداد ردیف‌ها = حداقل ۲۰، ولی اگر داده‌ها بیشتر شوند، همه رو نشان بده
+      let dataToShow;
+
+if (this.rowLimit === 'all') {
+    dataToShow = this.outputData;
+} else {
+    dataToShow = this.outputData.slice(-this.rowLimit);
+}
+
+for (let i = 0; i < dataToShow.length; i++) {
+        const startIndex = this.outputData.length - dataToShow.length;
+const row = dataToShow[i] || {};
+const realIndex = startIndex + i;
+
+        const tr = document.createElement('tr');
+        
+        tr.innerHTML = `
+            <td>${i + 1}</td>
+            <td><input type="number" class="form-control form-control-sm" step="0.1" 
+                value="${row.length || ''}" oninput="bannerSystem.updateOutputRow(${realIndex}, 'length', this.value, this)"></td>
+            <td><input type="number" class="form-control form-control-sm" step="0.1" 
+                value="${row.width || ''}" oninput="bannerSystem.updateOutputRow(${realIndex}, 'width', this.value, this)"></td>
+            <td><input type="number" class="form-control form-control-sm" 
+                value="${row.quantity || ''}" oninput="bannerSystem.updateOutputRow(${realIndex}, 'quantity', this.value, this)"></td>
+            <td><input type="text" class="form-control form-control-sm text-center" 
+                value="${row.area || ''}" readonly></td>
+            <td><input type="text" class="form-control form-control-sm" 
+                value="${row.requester || ''}" list="requesterList" 
+                onchange="bannerSystem.updateOutputRow(${realIndex}, 'requester', this.value)"></td>
+            <td><input type="text" class="form-control form-control-sm" 
+                value="${row.subject || ''}" list="subjectList" 
+                onchange="bannerSystem.updateOutputRow(${realIndex}, 'subject', this.value)"></td>
+            <td><input type="text" class="form-control form-control-sm" 
+                value="${row.description || ''}" list="description"
+                onchange="bannerSystem.updateOutputRow(${realIndex}, 'description', this.value)"></td>
+            <td><input type="text" class="form-control form-control-sm" 
+                value="${row.receiver || ''}" list="receiverList" 
+                onchange="bannerSystem.updateOutputRow(${realIndex}, 'receiver', this.value)"></td>
+            <td><input type="text" class="form-control form-control-sm" 
+                value="${row.printDate || ''}" placeholder="1404/05/01" 
+                data-date-field="printDate"
+                onchange="bannerSystem.updateOutputRow(${realIndex}, 'printDate', this.value)"></td>
+            <td>
+<input type="text" 
+class="form-control form-control-sm ${row.shomarename === 'نامه ندارد' ? 'no-letter' : ''}"
+value="${row.shomarename || ''}" 
+list="shomarenameList"
+onchange="bannerSystem.updateOutputRow(${realIndex}, 'shomarename', this.value, this)">
+</td>
+            <td><input type="text" class="form-control form-control-sm" 
+                value="${row.tarikhesabt || ''}" placeholder="1404/05/01" 
+data-date-field="tarikhesabt"
+                onchange="bannerSystem.updateOutputRow(${realIndex}, 'tarikhesabt', this.value)"></td>
+        `;
+        
+        tbody.appendChild(tr);
+    }
+
+    this.calculateOutputTotals();
+
+        // ✅ فقط یکبار رویداد کلیک مرتب‌سازی رو وصل می‌کنیم // <td><input type="text" class="form-control form-control-sm" 
+                //value="${row.shomarename || ''}" list="shomarenameList" 
+                //onchange="bannerSystem.updateOutputRow(${realIndex}, 'shomarename', this.value, this)"></td>
+        if (!this.sortBtnAttached) {
+            const sortBtn = document.getElementById('sortPrintDateBtn');
+            if (sortBtn) {
+                sortBtn.addEventListener('click', () => this.toggleSortOrder());
+                this.sortBtnAttached = true;
+            }
+        }
+    }
+
+    // تابعی برای تغییر جهت مرتب‌سازی و بازسازی جدول
+    toggleSortOrder() {
+        const toDateNumber = (jdate) => {
+            if (!jdate || typeof jdate !== 'string') return 0;
+            const parts = jdate.split('/');
+            if (parts.length !== 3) return 0;
+            const [y, m, d] = parts.map(p => parseInt(p, 10));
+            return y * 10000 + m * 100 + d;
+        };
+
+        this.outputData.sort((a, b) => {
+            const da = toDateNumber(a.printDate);
+            const db = toDateNumber(b.printDate);
+            return this.sortOrder === 'asc' ? da - db : db - da;
+        });
+
+        this.sortOrder = this.sortOrder === 'asc' ? 'desc' : 'asc';
+        this.saveData();
+        this.generateOutputTable();
+        const sortBtn = document.getElementById('sortPrintDateBtn');
+if (sortBtn) {
+    sortBtn.textContent = this.sortOrder === 'asc' ? '🔽' : '🔼';
+}
+    }
+    setRowLimit(limit) {
+        this.rowLimit = limit;
+        this.generateOutputTable();
+    }
+
+    setCustomRowLimit(value) {
+        const n = parseInt(value, 10);
+        if (!isNaN(n) && n > 0) {
+            this.rowLimit = n;
+            this.generateOutputTable();
+        }
+    }
+
+    showAllRows() {
+        this.rowLimit = 'all';
+        this.generateOutputTable();
+    }
+    setInputRowLimit(limit) {
+    this.inputRowLimit = limit;
+    this.generateInputTable();
+}
+
+setCustomInputRowLimit(value) {
+    const n = parseInt(value, 10);
+    if (!isNaN(n) && n > 0) {
+        this.inputRowLimit = n;
+        this.generateInputTable();
+    }
+}
+
+showAllInputRows() {
+    this.inputRowLimit = 'all';
+    this.generateInputTable();
+}
+    // تولید جدول ورودی
+    generateInputTable() {
+        const tbody = document.getElementById('inputTableBody');
+        tbody.innerHTML = '';
+
+        let inputDataToShow;
+
+if (this.inputRowLimit === 'all') {
+    inputDataToShow = this.inputData;
+} else {
+    inputDataToShow = this.inputData.slice(-this.inputRowLimit);
+}
+
+for (let i = 0; i < inputDataToShow.length; i++) {
+    const startIndex = this.inputData.length - inputDataToShow.length;
+    const row = inputDataToShow[i] || {};
+    const realIndex = startIndex + i;
+            const tr = document.createElement('tr');
+            
+            tr.innerHTML = `
+                <td>${i + 1}</td>
+                <td><input type="number" class="form-control form-control-sm" step="0.1" 
+                    value="${row.length || ''}" oninput="bannerSystem.updateInputRow(${realIndex}, 'length', this.value, this)"></td>
+                <td><input type="number" class="form-control form-control-sm" step="0.1" 
+                    value="${row.width || ''}" oninput="bannerSystem.updateInputRow(${realIndex}, 'width', this.value, this)"></td>
+                <td><input type="number" class="form-control form-control-sm" 
+                    value="${row.quantity || ''}" oninput="bannerSystem.updateInputRow(${realIndex}, 'quantity', this.value, this)"></td>
+                <td><input type="text" class="form-control form-control-sm text-center" 
+                    value="${row.area || ''}" readonly></td>
+                <td><input type="text" class="form-control form-control-sm" 
+                    value="${row.receiveDate || ''}" placeholder="1404/05/01" 
+                    onchange="bannerSystem.updateInputRow(${realIndex}, 'receiveDate', this.value)"></td>
+                <td><input type="text" class="form-control form-control-sm" 
+                    value="${row.supplier || ''}" list="supplierList" 
+                    onchange="bannerSystem.updateInputRow(${realIndex}, 'supplier', this.value)"></td>
+            `;
+            
+            tbody.appendChild(tr);
+        }
+
+        this.calculateInputTotals();
+    }
+    repeatLastOutputRow() {
+    if (this.outputData.length === 0) return;
+
+    const lastRow = this.outputData[this.outputData.length - 1];
+
+    // ایجاد کپی از آخرین ردیف
+    const newRow = { ...lastRow };
+
+    this.outputData.push(newRow);
+
+    this.saveData();
+    this.generateOutputTable();
+    this.calculateOutputTotals();
+    this.updateStats();
+}
+
+    // به‌روزرسانی ردیف خروجی
+   updateOutputRow(index, field, value, inputElement = null) {
+    if (!this.outputData[index]) {
+        this.outputData[index] = {};
+    }
+    if (field === 'shomarename' && value === '000') {
+    value = 'نامه ندارد';
+    if (inputElement) {
+        inputElement.value = value;
+        inputElement.style.color = 'red';
+        inputElement.style.fontWeight = 'bold';
+    }
+}
+
+    this.outputData[index][field] = value;
+
+    if (field === 'length' || field === 'width' || field === 'quantity') {
+        const length = parseFloat(this.outputData[index].length) || 0;
+        const width = parseFloat(this.outputData[index].width) || 0;
+        const quantity = parseFloat(this.outputData[index].quantity) || 0;
+
+        this.outputData[index].area = (length * width * quantity).toFixed(2);
+
+        const currentRow = inputElement ? inputElement.closest('tr') : null;
+        const areaInput = currentRow ? currentRow.querySelector('td:nth-child(5) input') : null;
+
+        if (areaInput) {
+            areaInput.value = this.outputData[index].area;
+        }
+        
+    }
+
+    this.saveData();
+    this.calculateOutputTotals();
+    this.updateStats();
+    this.loadDropdownOptions();
+}
+   
+    // به‌روزرسانی ردیف ورودی
+    updateInputRow(index, field, value, inputElement = null) {
+    if (!this.inputData[index]) {
+        this.inputData[index] = {};
+    }
+
+    this.inputData[index][field] = value;
+
+    // محاسبه مساحت
+    if (field === 'length' || field === 'width' || field === 'quantity') {
+        const length = parseFloat(this.inputData[index].length) || 0;
+        const width = parseFloat(this.inputData[index].width) || 0;
+        const quantity = parseFloat(this.inputData[index].quantity) || 0;
+
+        this.inputData[index].area = (length * width * quantity).toFixed(2);
+
+        // فقط همان سطر را آپدیت کن، نه کل جدول
+        const currentRow = inputElement ? inputElement.closest('tr') : null;
+        const areaInput = currentRow ? currentRow.querySelector('td:nth-child(5) input') : null;
+
+        if (areaInput) {
+            areaInput.value = this.inputData[index].area;
+        }
+    }
+
+    this.saveData();
+    this.calculateInputTotals();
+    this.updateStats();
+    this.loadDropdownOptions();
+}
+
+    // محاسبه مجموع خروجی
+    calculateOutputTotals() {
+        let totalArea = 0;
+        let totalCount = 0;
+
+        this.outputData.forEach(row => {
+            if (row && row.area) {
+                totalArea += parseFloat(row.area) || 0;
+            }
+            if (row && row.quantity) {
+                totalCount += parseInt(row.quantity) || 0;
+            }
+        });
+
+        document.getElementById('totalOutputArea').value = totalArea.toFixed(2);
+        document.getElementById('totalOutputCount').value = totalCount;
+    }
+
+    // محاسبه مجموع ورودی
+    calculateInputTotals() {
+        let totalArea = 0;
+        let totalCount = 0;
+
+        this.inputData.forEach(row => {
+            if (row && row.area) {
+                totalArea += parseFloat(row.area) || 0;
+            }
+            if (row && row.quantity) {
+                totalCount += parseInt(row.quantity) || 0;
+            }
+        });
+
+        document.getElementById('totalInputArea').value = totalArea.toFixed(2);
+        document.getElementById('totalInputCount').value = totalCount;
+    }
+    //تابع محاسبه ی دوباره و نمایش متراژ
+recalculateAllAreas() {
+
+  this.outputData.forEach((row) => {
+    const length = parseFloat(row.length) || 0;
+    const width = parseFloat(row.width) || 0;
+    const quantity = parseFloat(row.quantity) || 0;
+
+    row.area = (length * width * quantity).toFixed(2);
+  });
+
+  this.inputData.forEach((row) => {
+    const length = parseFloat(row.length) || 0;
+    const width = parseFloat(row.width) || 0;
+    const quantity = parseFloat(row.quantity) || 0;
+
+    row.area = (length * width * quantity).toFixed(2);
+  });
+  this.saveData();
+
+}
+    // به‌روزرسانی آمار کلی
+    updateStats() {
+        const outputTotal = parseFloat(document.getElementById('totalOutputArea').value) || 0;
+        const inputTotal = parseFloat(document.getElementById('totalInputArea').value) || 0;
+        const outputCount = parseInt(document.getElementById('totalOutputCount').value) || 0;
+        const inputCount = parseInt(document.getElementById('totalInputCount').value) || 0;
+
+        document.getElementById('totalOutput').textContent = outputTotal.toFixed(1);
+        document.getElementById('totalInput').textContent = inputTotal.toFixed(1);
+        document.getElementById('totalBanners').textContent = (outputCount + inputCount);
+        document.getElementById('inventory').textContent = (inputTotal - outputTotal).toFixed(1);
+    }
+
+    // ذخیره داده‌ها
+    saveData() {
+        localStorage.setItem('outputData', JSON.stringify(this.outputData));
+        localStorage.setItem('inputData', JSON.stringify(this.inputData));
+    }
+
+    // ایجاد لیست کشویی از داده‌های موجود
+    createDatalist(id, values) {
+        const datalist = document.getElementById(id);
+        datalist.innerHTML = '';
+        [...new Set(values.filter(v => v))].forEach(val => {
+            const option = document.createElement('option');
+            option.value = val;
+            datalist.appendChild(option);
+        });
+    }
+
+    loadDropdownOptions() {
+        const requesters = this.outputData.map(r => r?.requester).filter(Boolean);
+        const subjects = this.outputData.map(r => r?.subject).filter(Boolean);
+        const receivers = this.outputData.map(r => r?.receiver).filter(Boolean);
+        const suppliers = this.inputData.map(r => r?.supplier).filter(Boolean);
+        const shomarenameList = this.outputData.map(r => r?.shomarename).filter(Boolean);
+
+        this.createDatalist('requesterList', requesters);
+        this.createDatalist('subjectList', subjects);
+        this.createDatalist('receiverList', receivers);
+        this.createDatalist('supplierList', suppliers);
+        this.createDatalist('shomarenameList', shomarenameList);
+
+        // پرکردن فیلتر dropdown ها
+        this.populateFilterDropdowns();
+    }
+
+    populateFilterDropdowns() {
+        const requesters = [...new Set(this.outputData.map(r => r?.requester).filter(Boolean))];
+        const subjects = [...new Set(this.outputData.map(r => r?.subject).filter(Boolean))];
+        const receivers = [...new Set(this.outputData.map(r => r?.receiver).filter(Boolean))];
+        const shomarename = [...new Set(this.outputData.map(r => r?.shomarename).filter(Boolean))];
+
+        this.populateSelect('filterRequester', requesters);
+        this.populateSelect('filterSubject', subjects);
+        this.populateSelect('filterReceiver', receivers);
+        this.populateSelect('filtershomarename', shomarename);
+    }
+
+    populateSelect(selectId, options) {
+        const select = document.getElementById(selectId);
+        if (select) {
+            // پاک کردن گزینه‌های قبلی به جز "همه"
+            while(select.children.length > 1) {
+                select.removeChild(select.lastChild);
+            }
+            
+            options.forEach(option => {
+                const opt = document.createElement('option');
+                opt.value = option;
+                opt.textContent = option;
+                select.appendChild(opt);
+            });
+        }
+    }
+
+    // ثبت آمار خروجی
+    saveOutputData() {
+        alert("اطلاعات آمار چاپ شده با موفقیت ثبت شد");
+        this.saveData();
+    }
+
+    // ثبت آمار ورودی
+    saveInputData() {
+        alert("اطلاعات وارده با موفقیت ثبت شد");
+        this.saveData();
+    }
+
+    // بکاپ‌گیری داده‌ها
+    backupData() {
+        const data = {
+            outputData: this.outputData,
+            inputData: this.inputData,
+            backupDate: new Date().toISOString(),
+            stats: {
+                totalOutput: document.getElementById('totalOutput').textContent,
+                totalInput: document.getElementById('totalInput').textContent,
+                totalBanners: document.getElementById('totalBanners').textContent,
+                inventory: document.getElementById('inventory').textContent
+            }
+        };
+
+        const blob = new Blob([JSON.stringify(data, null, 2)], { 
+            type: 'application/json;charset=utf-8' 
+        });
+        
+        const today = new Date();
+        const dateStr = `${today.getFullYear()}-${String(today.getMonth() + 1).padStart(2, '0')}-${String(today.getDate()).padStart(2, '0')}`;
+        
+        saveAs(blob, `banner_backup_${dateStr}.json`);
+    }
+
+    // پاک کردن کلیه داده‌ها
+    clearAllData() {
+        if (confirm('آیا از حذف همه داده‌ها مطمئن هستید؟\nاین عمل غیرقابل بازگشت است!')) {
+            if (confirm('آخرین هشدار: تمام اطلاعات پاک خواهد شد!')) {
+                this.outputData = [];
+                this.inputData = [];
+                this.saveData();
+                this.generateOutputTable();
+                this.generateInputTable();
+                this.updateStats();
+                alert("تمام داده‌ها با موفقیت پاک شد");
+            }
+        }
+        
+    }
+     // ----------------------
+    // افزودن ردیف جدید خروجی
+    // ----------------------
+    addOutputRow() {
+      this.outputData.push({
+        length: '', width: '', quantity: '', area: '',
+        requester: '', subject: '', description: '', receiver: '',
+        printDate: '', shomarename: '', tarikhesabt: ''
+      });
+      this.generateOutputTable();
+      this.saveData();
+      this.calculateOutputTotals();
+      this.updateStats();
+    }
+    // ----------------------
+// حذف آخرین ردیف خروجی
+// ----------------------
+removeOutputRow() {
+  if (this.outputData.length === 0) return;
+  const confirmDelete = confirm("آیا از حذف آخرین ردیف اطمینان دارید؟");
+
+  if (!confirmDelete) return;
+
+  this.outputData.pop(); // حذف آخرین ردیف
+  this.generateOutputTable();
+  this.saveData();
+  this.calculateOutputTotals();
+  this.updateStats();
+}
+
+    // ----------------------
+    // افزودن ردیف جدید ورودی
+    // ----------------------
+    addInputRow() {
+      this.inputData.push({
+        length: '', width: '', quantity: '', area: '',
+        receiveDate: '', supplier: ''
+      });
+      this.generateInputTable();
+      this.saveData();
+      this.calculateInputTotals();
+      this.updateStats();
+    }
+    repeatLastInputRow() {
+    // بررسی اینکه آیا ردیفی برای تکرار وجود دارد
+    if (this.inputData.length === 0) return;
+
+    // برداشتن آخرین ردیف
+    const lastRow = this.inputData[this.inputData.length - 1];
+
+    // ایجاد یک کپی دقیق از ردیف
+    // از آنجایی که در ورودی‌ها معمولاً تاریخ و نام تامین‌کننده هم هست، همه کپی می‌شوند
+    const newRow = { ...lastRow };
+
+    // افزودن به آرایه ورودی‌ها
+    this.inputData.push(newRow);
+
+    // ذخیره و بازسازی جدول ورودی
+    this.saveData(); // فرض بر این است که این متد داده‌ها را در localStorage ذخیره می‌کند
+    this.generateInputTable(); // تابع بازسازی جدول ورودی (نام این تابع را طبق فایل خودت چک کن)
+    this.calculateInputTotals();
+    this.updateStats();
+}
+    // ----------------------
+// حذف آخرین ردیف ورودی
+// ----------------------
+removeInputRow() {
+  if (this.inputData.length === 0) return;
+
+  const confirmDelete = confirm("آیا از حذف آخرین ردیف ورودی اطمینان دارید؟");
+  if (!confirmDelete) return;
+
+  this.inputData.pop(); // حذف آخرین ردیف ورودی
+
+  this.generateInputTable();
+  this.saveData();
+  this.calculateInputTotals();
+  this.updateStats();
+}
+    // ✅ نسخه‌ی درست: نمایش جدول خروجی فیلترشده با همان استایل جدول اصلی
+generateFilteredOutputTable(filteredData) {
+  const tbody = document.getElementById('outputTableBody');
+  if (!tbody) return;
+
+  tbody.innerHTML = '';
+
+  let totalArea = 0;
+  let totalCount = 0;
+
+  filteredData.forEach((row, i) => {
+    const tr = document.createElement('tr');
+    tr.innerHTML = `
+      <td>${i + 1}</td>
+      <td><input type="number" class="form-control form-control-sm" value="${row.length || ''}" readonly></td>
+      <td><input type="number" class="form-control form-control-sm" value="${row.width || ''}" readonly></td>
+      <td><input type="number" class="form-control form-control-sm" value="${row.quantity || ''}" readonly></td>
+      <td><input type="text" class="form-control form-control-sm text-center" value="${row.area || ''}" readonly></td>
+      <td><input type="text" class="form-control form-control-sm" value="${row.requester || ''}" readonly></td>
+      <td><input type="text" class="form-control form-control-sm" value="${row.subject || ''}" readonly></td>
+      <td><input type="text" class="form-control form-control-sm" value="${row.receiver || ''}" readonly></td>
+      <td><input type="text" class="form-control form-control-sm" value="${row.printDate || ''}" readonly></td>
+      <td><input type="text" class="form-control form-control-sm" value="${row.shomarename || ''}" readonly></td>
+      <td><input type="text" class="form-control form-control-sm" value="${row.tarikhesabt || ''}" readonly></td>
+    `;
+    tbody.appendChild(tr);
+
+    totalArea += parseFloat(row.area) || 0;
+    totalCount += parseInt(row.quantity) || 0;
+  });
+
+  document.getElementById('totalOutputArea').value = totalArea.toFixed(2);
+  document.getElementById('totalOutputCount').value = totalCount;
+  document.getElementById('totalOutput').textContent = totalArea.toFixed(2);
+}
+    
+}
+
+// توابع مودال گزارش
+function showReportModal() {
+    const modal = new bootstrap.Modal(document.getElementById('reportModal'));
+    modal.show();
+}
+
+function generateReport() {
+    const startDate = document.getElementById('reportStartDate').value;
+    const endDate = document.getElementById('reportEndDate').value;
+    const type = document.getElementById('reportType').value;
+
+    if (!startDate || !endDate) {
+        alert('لطفاً تاریخ شروع و پایان را وارد کنید');
+        return;
+    }
+
+    const filtered = bannerSystem.outputData.filter(row => {
+        if (!row.printDate) return false;
+        return row.printDate >= startDate && row.printDate <= endDate;
+    });
+
+    if (filtered.length === 0) {
+        alert('هیچ رکوردی در این بازه زمانی یافت نشد');
+        return;
+    }
+
+    if (type === 'pdf') {
+        generatePDFReport(filtered, startDate, endDate);
+    } else {
+        generateTextReport(filtered, startDate, endDate);
+    }
+
+    bootstrap.Modal.getInstance(document.getElementById('reportModal')).hide();
+}
+
+function generatePDFReport(data, startDate, endDate) {
+    try {
+        const { jsPDF } = window.jspdf;
+        const doc = new jsPDF();
+        
+        // تنظیم فونت
+        doc.setFontSize(16);
+        doc.text('Report - Banner Management System', 105, 20, null, null, 'center');
+        
+        doc.setFontSize(12);
+        doc.text(`From: ${startDate} To: ${endDate}`, 105, 30, null, null, 'center');
+        
+        let y = 50;
+        let totalArea = 0;
+        let totalCount = 0;
+        
+        data.forEach((row, idx) => {
+            if (row.requester && row.area) {
+                const area = parseFloat(row.area) || 0;
+                const quantity = parseInt(row.quantity) || 0;
+                totalArea += area;
+                totalCount += quantity;
+                
+                doc.text(`${idx + 1}- ${row.requester} | ${row.subject || ''} | ${quantity} Banner | ${row.length || ''}x${row.width || ''} m | ${area} m² | Print Date: ${row.printDate || ''}`, 20, y);
+                y += 8;
+                
+                if (y > 280) {
+                    doc.addPage();
+                    y = 20;
+                }
+            }
+        });
+        
+        y += 10;
+        doc.text(`Total: ${totalCount} Banners = ${totalArea.toFixed(2)} m²`, 20, y);
+        
+        doc.save(`report_${startDate}_${endDate}.pdf`);
+    } catch (error) {
+        alert('خطا در تولید PDF. از حالت متنی استفاده کنید.');
+        generateTextReport(data, startDate, endDate);
+    }
+}
+
+function generateTextReport(data, startDate, endDate) {
+    let report = `مدیر کل محترم اداره روابط عمومی و امور بین الملل\n`;
+    report += `با سلام\n`;
+    report += `احتراماً بیلان عملکرد مرکز چاپ و نشر شهید حسین علیخانی از مورخ ${startDate} لغایت ${endDate}به شرح ذیل به حضور ایفاد میگردد.\n\n`;
+    
+    let totalArea = 0;
+    let totalCount = 0;
+    
+    data.forEach((row, idx) => {
+        if (row.requester && row.area) {
+            const area = parseFloat(row.area) || 0;
+            const quantity = parseInt(row.quantity) || 0;
+            totalArea += area;
+            totalCount += quantity;
+            
+            report += `${idx + 1}- (${row.requester}) ${quantity} تخته به ابعاد ${row.length || ''} × ${row.width || ''} برابر ${area} متر مربع با موضوع (${row.subject}) در مورخ ${row.printDate || ''}\n`;
+        }
+    });
+    
+    report += `\nجمع کل بنر چاپ شده در بازه ی زمانی فوق به اختصار ${totalCount} تخته به مساحت ${totalArea.toFixed(2)} متر مربع است.\n`;
+    
+    
+    report += `\n`;
+    report += `\n`;
+    report += `مدیر مرکز چاپ و نشر شهید علیخانی\n`;
+    const blob = new Blob([report], { type: 'text/plain;charset=utf-8' });
+    saveAs(blob, `report_${startDate}_${endDate}.txt`);
+}
+
+// توابع مودال فیلتر
+function showFilterModal() {
+    bannerSystem.loadDropdownOptions();
+    const modal = new bootstrap.Modal(document.getElementById('filterModal'));
+    modal.show();
+
+    // 🟢 اتصال تقویم شمسی هنگام باز شدن مودال (حل مشکل بارگذاری زودهنگام)
+    const startPrint = document.getElementById("filterPrintStart");
+    const endPrint = document.getElementById("filterPrintEnd");
+    if (startPrint) startPrint.addEventListener("click", e => showCalendar(e.target));
+    if (endPrint) endPrint.addEventListener("click", e => showCalendar(e.target));
+}
+
+function applyFilter() {
+    const filters = {
+        requester: document.getElementById('filterRequester').value,
+        subject: document.getElementById('filterSubject').value,
+        receiver: document.getElementById('filterReceiver').value,
+        shomarename: document.getElementById('filtershomarename').value,
+        };
+const toNum = d => d ? d.replace(/\//g, '') * 1 : 0;
+    const start = toNum(document.getElementById('filterPrintStart').value);
+    const end   = toNum(document.getElementById('filterPrintEnd').value);
+
+    let filtered = bannerSystem.outputData.filter(row => {
+        if (!row.requester) return false;
+
+        const d = toNum(row.printDate);
+        if (filters.requester && row.requester !== filters.requester) return false;
+        if (filters.subject && row.subject !== filters.subject) return false;
+        if (filters.receiver && row.receiver !== filters.receiver) return false;
+        if (filters.shomarename && row.shomarename !== filters.shomarename) return false;
+        if (start && d < start) return false;
+        if (end && d > end) return false;
+        
+        return true;
+    });
+
+    displayFilterResults(filtered);
+}
+
+function displayFilterResults(data) {
+    const resultsDiv = document.getElementById('filterResults');
+    
+    if (data.length === 0) {
+        resultsDiv.innerHTML = '<div class="alert alert-warning">هیچ نتیجه‌ای یافت نشد</div>';
+        return;
+    }
+    
+    let totalArea = 0;
+    let totalCount = 0;
+    
+    let html = '<div class="mt-3"><h6>نتایج فیلتر:</h6><div class="table-responsive"><table class="table table-sm table-striped">';
+    html += '<thead><tr><th>ردیف</th><th>درخواست کننده</th><th>موضوع</th><th>تعداد</th><th>متراژ</th><th>تاریخ چاپ</th></tr></thead><tbody>';
+    
+    data.forEach((row, idx) => {
+        const area = parseFloat(row.area) || 0;
+        const quantity = parseInt(row.quantity) || 0;
+        totalArea += area;
+        totalCount += quantity;
+        
+        html += `<tr>
+            <td>${idx + 1}</td>
+            <td>${row.requester || ''}</td>
+            <td>${row.subject || ''}</td>
+            <td>${quantity}</td>
+            <td>${area}</td>
+            <td>${row.printDate || ''}</td>
+        </tr>`;
+    });
+    
+    html += `</tbody></table></div>`;
+    html += `<div class="alert alert-info mt-2"><strong>جمع کل: ${totalCount} تخته = ${totalArea.toFixed(2)} متر</strong></div></div>`;
+    
+    resultsDiv.innerHTML = html;
+}
+
+function resetFilter() {
+    document.getElementById('filterRequester').value = '';
+    document.getElementById('filterSubject').value = '';
+    document.getElementById('filterReceiver').value = '';
+    document.getElementById('filtershomarename').value = '';
+    document.getElementById('filterPrintStart').value = '';
+    document.getElementById('filterPrintEnd').value = '';
+    document.getElementById('filterResults').innerHTML = '';
+}
+
+// توابع بازیابی بکاپ
+function restoreData() {
+    if (confirm('آیا می‌خواهید داده‌های قبلی را با بکاپ جایگزین کنید؟\nداده‌های فعلی پاک خواهند شد!')) {
+        document.getElementById('restoreInput').click();
+    }
+}
+
+function handleRestoreFile(event) {
+    const file = event.target.files[0];
+    if (file && file.type === 'application/json') {
+        const reader = new FileReader();
+        reader.onload = function(e) {
+            try {
+                const data = JSON.parse(e.target.result);
+                
+                if (data.outputData && data.inputData) {
+                    bannerSystem.outputData = data.outputData; //برا جایگزینی داده ها 
+                    bannerSystem.inputData = data.inputData;
+                     bannerSystem.recalculateAllAreas();
+                    bannerSystem.saveData(); //ذخیره
+                    bannerSystem.init(); //رندر دوباره
+                    alert('داده‌ها با موفقیت بازیابی شد');
+                } else {
+                    alert('فایل بکاپ نامعتبر است');
+                }
+            } catch (error) {
+                alert('خطا در خواندن فایل بکاپ');
+            }
+        };
+        reader.readAsText(file);
+    } else {
+        alert('لطفاً یک فایل JSON معتبر انتخاب کنید');
+    }
+    
+    // پاک کردن مقدار input برای امکان انتخاب مجدد همان فایل
+    event.target.value = '';
+}
+
+/// مقداردهی اولیه سیستم
+let bannerSystem;
+
+function initializeSystem() {
+    if (document.readyState === "loading") {
+        // یعنی DOM هنوز لود نشده → منتظر بمون
+        document.addEventListener("DOMContentLoaded", () => {
+            bannerSystem = new BannerSystem();
+            bannerSystem.init();
+        });
+    } else {
+        // یعنی DOM از قبل لود شده → مستقیم اجرا کن
+        bannerSystem = new BannerSystem();
+        bannerSystem.init();
+    }
+}
+document.addEventListener('click', (e) => {
+  // اگر روی input کلیک شد که مشخصه تاریخ دارد
+  const dateInput = e.target.closest('input[data-date-field], input#filterStartDate, input#filterEndDate');
+  if (dateInput) {
+    showCalendar(dateInput);
+  }
+});
+</script>
+<!-- 🗓️ تقویم شمسی ساده برای ورودی تاریخ‌ها -->
+<div id="jalaliCalendar" 
+     style="position:absolute; display:none; background:#fff; border:1px solid #ccc; padding:8px; border-radius:6px; box-shadow:0 0 8px rgba(0,0,0,0.15); z-index:9999; direction:rtl; font-family:'Vazirmatn',sans-serif;">
+  <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:4px;">
+    <button id="prevMonth" style="border:none; background:none; cursor:pointer;">▶</button>
+    <span id="calendarTitle" style="font-weight:bold;"></span>
+    <button id="nextMonth" style="border:none; background:none; cursor:pointer;">◀</button>
+  </div>
+  <div id="calendarDays" style="display:grid; grid-template-columns:repeat(7,1fr); text-align:center; gap:3px; font-size:13px;"></div>
+</div>
+<script>
+/* 🗓️ تقویم شمسی آفلاین */
+(function () {
+  const months = [
+    "فروردین","اردیبهشت","خرداد","تیر","مرداد","شهریور",
+    "مهر","آبان","آذر","دی","بهمن","اسفند"
+  ];
+  
+  const calendar = document.getElementById("jalaliCalendar");
+  const daysContainer = document.getElementById("calendarDays");
+  const title = document.getElementById("calendarTitle");
+
+  let currentInput = null;
+  let jYear, jMonth;
+
+  // 🔹 محاسبه کبیسه بودن سال جلالی
+  function isLeap(yr) {
+    return (((yr - 474) % 2820 + 474 + 38) * 682) % 2816 < 682;
+  }
+
+  // 🔹 تبدیل میلادی به جلالی
+  function toJalali(gy, gm, gd) {
+    const g_d_m = [0,31,59,90,120,151,181,212,243,273,304,334];
+    const gy2 = (gm > 2) ? gy + 1 : gy;
+    let days = 355666 + (365 * gy) + Math.floor((gy2 + 3) / 4)
+              - Math.floor((gy2 + 99) / 100) + Math.floor((gy2 + 399) / 400)
+              + gd + g_d_m[gm - 1];
+    let jy = -1595 + 33 * Math.floor(days / 12053);
+    days %= 12053;
+    jy += 4 * Math.floor(days / 1461);
+    days %= 1461;
+    if (days > 365) {
+      jy += Math.floor((days - 1) / 365);
+      days = (days - 1) % 365;
+    }
+    const jm = (days < 186) ? 1 + Math.floor(days / 31) : 7 + Math.floor((days - 186) / 30);
+    const jd = 1 + ((days < 186) ? (days % 31) : ((days - 186) % 30));
+    return { jy, jm, jd };
+  }
+
+  // 🔹 ساخت جدول روزها
+  function renderCalendar(year, month) {
+    daysContainer.innerHTML = "";
+    jYear = year;
+    jMonth = month;
+    title.textContent = `${months[month - 1]} ${year}`;
+
+    const totalDays = (month <= 6) ? 31 : (month <= 11 ? 30 : (isLeap(year) ? 30 : 29));
+
+    for (let d = 1; d <= totalDays; d++) {
+      const btn = document.createElement("button");
+      btn.textContent = d;
+      btn.style.cssText = `
+        border:none;
+        background:none;
+        cursor:pointer;
+        padding:4px;
+        border-radius:4px;
+      `;
+       btn.onclick = () => {
+  if (currentInput) {
+    currentInput.value = `${year}/${String(month).padStart(2,"0")}/${String(d).padStart(2,"0")}`;
+    
+    currentInput.dispatchEvent(new Event('change', { bubbles: true }));
+    
+    calendar.style.display = "none";
+  }
+};
+      daysContainer.appendChild(btn);
+    }
+  }// 🟢 قبلاً داخلی بود اما الان جهانی تعریف می‌کنیم:
+  window.showCalendar = function(input) {
+    currentInput = input;
+    const rect = input.getBoundingClientRect();
+    calendar.style.top = rect.bottom + 6 + window.scrollY + "px";
+    calendar.style.left = rect.left + "px";
+    calendar.style.display = "block";
+    const today = new Date();
+    const { jy, jm } = toJalali(today.getFullYear(), today.getMonth() + 1, today.getDate());
+    renderCalendar(jy, jm);
+  };
+
+  document.getElementById("prevMonth").onclick = () => {
+    jMonth--;
+    if (jMonth < 1) { jMonth = 12; jYear--; }
+    renderCalendar(jYear, jMonth);
+  };
+
+  document.getElementById("nextMonth").onclick = () => {
+    jMonth++;
+    if (jMonth > 12) { jMonth = 1; jYear++; }
+    renderCalendar(jYear, jMonth);
+  };
+
+document.addEventListener("click", e => {
+  const clickedDateInput = e.target.closest('input[data-date-field], #filterStartDate, #filterEndDate, #filterPrintStart, #filterPrintEnd');
+
+  if (!calendar.contains(e.target) && !clickedDateInput) {
+    calendar.style.display = "none";
+  }
+});
+})();
+// 🟢 بخش فیلترینگ ترکیبی جدید و تقویم خروجی‌ها
+function toDateNumber(jdate) {
+  if (!jdate) return 0;
+  const p = jdate.split('/');
+  if (p.length !== 3) return 0;
+  const [y, m, d] = p.map(x => parseInt(x, 10));
+  return y * 10000 + m * 100 + d;
+}
+
+// تابع اصلی فیلترینگ ترکیبی
+function applyCombinedFilter() {
+  const reqFilter = document.getElementById('quickFilterRequester').value.trim();
+  const subFilter = document.getElementById('quickFilterSubject').value.trim();
+  const numFilter = document.getElementById('quickFilterLetterNumber').value.trim();
+  const start = document.getElementById('filterStartDate').value.trim();
+  const end = document.getElementById('filterEndDate').value.trim();
+
+  const startNum = toDateNumber(start);
+  const endNum = toDateNumber(end);
+
+  const allOutput = JSON.parse(localStorage.getItem('outputData')) || [];
+
+  const filtered = allOutput.filter(item => {
+    const d = toDateNumber(item.printDate);
+    const matchStart = !startNum || d >= startNum;
+    const matchEnd = !endNum || d <= endNum;
+
+    const matchRequester = !reqFilter || (item.requester && item.requester.toString().toLowerCase().includes(reqFilter.toLowerCase()));
+    const matchSubject = !subFilter || (item.subject && item.subject.toString().toLowerCase().includes(subFilter.toLowerCase()));
+    
+    let matchLetterNum = false;
+    if (!numFilter) {
+      matchLetterNum = true;
+    } else {
+      const letterVal = (item.shomarename || "").toString().trim().toLowerCase();
+      const filterLower = numFilter.toLowerCase();
+      if (filterLower === '000' || filterLower.includes('ندارد')) {
+        matchLetterNum = (letterVal === "" || letterVal.includes("ندارد") || letterVal === "000");
+      } else {
+        matchLetterNum = letterVal.includes(filterLower);
+      }
+    }
+
+    return matchStart && matchEnd && matchRequester && matchSubject && matchLetterNum;
+  });
+
+  const system = new BannerSystem();
+  system.outputData = filtered;
+  system.rowLimit = 'all'; 
+  system.generateOutputTable();
+  system.calculateOutputTotals();
+system.updateStats();
+}
+
+// اتصال تقویم به فیلدهای تاریخ
+const filterStart = document.getElementById("filterStartDate");
+const filterEnd   = document.getElementById("filterEndDate");
+if (filterStart) filterStart.addEventListener("click", e => showCalendar(e.target));
+if (filterEnd)   filterEnd.addEventListener("click", e => showCalendar(e.target));
+
+// اتصال دکمه اعمال فیلتر
+document.getElementById('applyDateFilterBtn').addEventListener('click', applyCombinedFilter);
+
+// دکمه پاک‌سازی فیلترها
+document.getElementById('clearDateFilterBtn').addEventListener('click', () => {
+  document.getElementById('quickFilterRequester').value = '';
+  document.getElementById('quickFilterSubject').value = '';
+  document.getElementById('quickFilterLetterNumber').value = '';
+  document.getElementById('filterStartDate').value = '';
+  document.getElementById('filterEndDate').value = '';
+
+  const system = new BannerSystem();
+  system.outputData = JSON.parse(localStorage.getItem('outputData')) || [];
+  system.rowLimit = 10; 
+  system.generateOutputTable();
+  system.calculateOutputTotals();
+system.updateStats();
+});
+
+// --- پایان کد جدید ---
+// ===== تنظیم ابعاد چاپ بنر =====
+function toggleBannerCalc() {
+  const body = document.getElementById('bannerCalcBody');
+  const btn  = document.getElementById('bannerCalcToggle');
+  const isOpen = body.classList.toggle('open');
+  btn.textContent = isOpen ? '🖨️ تنظیم ابعاد بنر ▼' : '🖨️ تنظیم ابعاد بنر ▲';
+}
+
+(function () {
+  const errInput    = document.getElementById('bc-errVal');
+  const targetInput = document.getElementById('bc-targetVal');
+  const dirPlus     = document.getElementById('bc-dir-plus');
+  const dirMinus    = document.getElementById('bc-dir-minus');
+  const lblPlus     = document.getElementById('bc-lbl-plus');
+  const lblMinus    = document.getElementById('bc-lbl-minus');
+  const resultBox   = document.getElementById('bc-resultBox');
+  const resultVal   = document.getElementById('bc-resultVal');
+  const resultSub   = document.getElementById('bc-resultSub');
+
+  function updateToggle() {
+    if (dirPlus.checked) {
+      lblPlus.className  = 'bc-active-plus';
+      lblMinus.className = '';
+    } else {
+      lblPlus.className  = '';
+      lblMinus.className = 'bc-active-minus';
+    }
+  }
+
+  function calc() {
+    const errMm    = parseFloat(errInput.value);
+    const targetCm = parseFloat(targetInput.value);
+    const isPlus   = dirPlus.checked;
+
+    if (isNaN(errMm) || isNaN(targetCm) || errMm < 0 || targetCm <= 0) {
+      resultBox.classList.add('bc-empty');
+      resultVal.textContent = '—';
+      resultSub.textContent = 'عدد را وارد کنید';
+      return;
+    }
+
+    const targetMm  = targetCm * 10;
+    const factor    = isPlus ? 1 + errMm / 1000 : 1 - errMm / 1000;
+    const designMm  = targetMm / factor;
+    const designCm  = designMm / 10;
+
+    resultBox.classList.remove('bc-empty');
+    resultVal.textContent = designCm.toFixed(2) + ' سانتی‌متر';
+    resultSub.textContent =
+      `= ${designMm.toFixed(2)} mm | هدف: ${targetCm} cm | خطا: ${isPlus ? '+' : '-'}${errMm} mm/m`;
+  }
+
+  errInput.addEventListener('input', calc);
+  targetInput.addEventListener('input', calc);
+  dirPlus.addEventListener('change',  () => { updateToggle(); calc(); });
+  dirMinus.addEventListener('change', () => { updateToggle(); calc(); });
+
+  updateToggle();
+})();
+// ===== پایان تنظیم ابعاد =====
+</script>
+</body>
+</html>
