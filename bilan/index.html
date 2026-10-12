@@ -1874,19 +1874,81 @@ function handleRestoreFile(event) {
 /// مقداردهی اولیه سیستم
 let bannerSystem;
 
-function initializeSystem() {
-    if (document.readyState === "loading") {
-        // یعنی DOM هنوز لود نشده → منتظر بمون
-        document.addEventListener("DOMContentLoaded", () => {
-            bannerSystem = new BannerSystem();
-            bannerSystem.init();
-        });
-    } else {
-        // یعنی DOM از قبل لود شده → مستقیم اجرا کن
-        bannerSystem = new BannerSystem();
-        bannerSystem.init();
+function showSyncToast(message) {
+    const toast = document.createElement('div');
+    toast.textContent = message;
+    toast.style.cssText = 'position:fixed;bottom:24px;left:24px;background:#15803d;color:#fff;padding:14px 22px;border-radius:10px;font-family:Vazirmatn,sans-serif;font-size:13.5px;box-shadow:0 10px 25px rgba(0,0,0,0.25);z-index:99999;direction:rtl;line-height:1.6;transition:opacity 0.3s ease;';
+    document.body.appendChild(toast);
+    setTimeout(() => {
+        toast.style.opacity = '0';
+        setTimeout(() => toast.remove(), 300);
+    }, 5500);
+}
+
+function formatJalaliDisplayDate(rawDate) {
+    if (!rawDate) return '';
+    const str = String(rawDate).trim();
+    if (str.length === 8 && !str.includes('/')) {
+        return `${str.slice(0, 4)}/${str.slice(4, 6)}/${str.slice(6, 8)}`;
+    }
+    return str;
+}
+
+async function checkVersionAndSync() {
+    try {
+        const res = await fetch(`latest_backup.json?t=${Date.now()}`);
+        if (!res.ok) return;
+
+        const remoteBackup = await res.json();
+        if (!remoteBackup || remoteBackup.version === undefined) return;
+
+        const localVersion = localStorage.getItem('data_version');
+
+        // مقایسه نسخه: در صورت تفاوت، جایگزینی کامل اطلاعات
+        if (String(localVersion) !== String(remoteBackup.version)) {
+            if (Array.isArray(remoteBackup.outputData) && Array.isArray(remoteBackup.inputData)) {
+                bannerSystem.outputData = remoteBackup.outputData;
+                bannerSystem.inputData = remoteBackup.inputData;
+
+                bannerSystem.recalculateAllAreas();
+                bannerSystem.saveData();
+                bannerSystem.init();
+
+                localStorage.setItem('data_version', String(remoteBackup.version));
+
+                // استخراج تاریخ از userPrintData
+                let targetDate = '';
+                if (Array.isArray(remoteBackup.userPrintData) && remoteBackup.userPrintData.length > 0) {
+                    targetDate = formatJalaliDisplayDate(remoteBackup.userPrintData[0]);
+                }
+
+                let message = "اطلاعات بیلان با موفقیت به نسخه جدید به‌روزرسانی شد.";
+                if (targetDate) {
+                    message = `اطلاعات بیلان با آخرین تغییرات ثبت‌شده تا تاریخ ${targetDate} با موفقیت به‌روزرسانی شد.`;
+                }
+
+                showSyncToast(message);
+            }
+        }
+    } catch (err) {
+        console.log("حالت آفلاین یا عدم دسترسی به سرور:", err);
     }
 }
+
+function initializeSystem() {
+    const start = async () => {
+        bannerSystem = new BannerSystem();
+        bannerSystem.init();
+        await checkVersionAndSync();
+    };
+
+    if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", start);
+    } else {
+        start();
+    }
+}
+
 document.addEventListener('click', (e) => {
   // اگر روی input کلیک شد که مشخصه تاریخ دارد
   const dateInput = e.target.closest('input[data-date-field], input#filterStartDate, input#filterEndDate');
