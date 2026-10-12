@@ -1,9 +1,6 @@
 {
   "version": 1,
-  "outputData": [14050712],
-  "inputData": [14050101]
-}
-{
+  "userPrintData":[14050712], 
   "outputData": [
     {
       "length": "4.4",
