@@ -1027,15 +1027,13 @@ function logout() {
 }
 
 function checkLogin() {
-    if (localStorage.getItem('userLoggedIn') === 'true') {
-        document.getElementById('loginSection').style.display = 'none';
-        document.getElementById('mainContent').classList.add('active');
-        initializeSystem();
-    }
+    // کاربر همیشه باید ابتدا نام کاربری و رمز عبور را وارد کند
+    localStorage.removeItem('userLoggedIn');
 }
 
 // بارگذاری اولیه
 checkLogin();
+
 
 // سیستم مدیریت بنر
 class BannerSystem {
@@ -1935,19 +1933,12 @@ async function checkVersionAndSync() {
     }
 }
 
-function initializeSystem() {
-    const start = async () => {
-        bannerSystem = new BannerSystem();
-        bannerSystem.init();
-        await checkVersionAndSync();
-    };
-
-    if (document.readyState === "loading") {
-        document.addEventListener("DOMContentLoaded", start);
-    } else {
-        start();
-    }
+async function initializeSystem() {
+    bannerSystem = new BannerSystem();
+    bannerSystem.init();
+    await checkVersionAndSync();
 }
+
 
 document.addEventListener('click', (e) => {
   // اگر روی input کلیک شد که مشخصه تاریخ دارد
