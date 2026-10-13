@@ -1,6 +1,6 @@
 {
-  "version": 1,
-  "userPrintData":[14050712], 
+"version": 2,
+  "userPrintData":[14050720],
   "outputData": [
     {
       "length": "4.4",
@@ -4571,6 +4571,136 @@
       "printDate": "1405/07/14",
       "shomarename": "نامه ندارد",
       "tarikhesabt": ""
+    },
+    {
+      "length": "5.2",
+      "width": "3.6",
+      "quantity": "2",
+      "area": "37.44",
+      "requester": "ستاد اقامه نماز",
+      "subject": "اطلاع رسانی",
+      "description": "",
+      "receiver": "ستاد اقامه نماز",
+      "printDate": "1405/07/15",
+      "shomarename": "نامه ندارد",
+      "tarikhesabt": ""
+    },
+    {
+      "length": "2.2",
+      "width": "1.2",
+      "quantity": "1",
+      "area": "2.64",
+      "requester": "ستاد اقامه نماز",
+      "subject": "اطلاع رسانی",
+      "description": "",
+      "receiver": "ستاد اقامه نماز",
+      "printDate": "1405/07/15",
+      "shomarename": "نامه ندارد",
+      "tarikhesabt": ""
+    },
+    {
+      "length": "4.4",
+      "width": "3.2",
+      "quantity": "1",
+      "area": "14.08",
+      "requester": "منطقه 5",
+      "subject": "تمثال مقام معظم رهبری",
+      "description": "",
+      "receiver": "منطقه 5",
+      "printDate": "1405/07/18",
+      "shomarename": "نامه ندارد",
+      "tarikhesabt": ""
+    },
+    {
+      "length": "4.4",
+      "width": "3.2",
+      "quantity": "10",
+      "area": "140.80",
+      "requester": "منطقه 4",
+      "subject": "اخطار به مالک",
+      "description": "",
+      "receiver": "منطقه 4",
+      "printDate": "1405/07/18",
+      "shomarename": "نامه ندارد",
+      "tarikhesabt": ""
+    },
+    {
+      "length": "3.2",
+      "width": "1.6",
+      "quantity": "1",
+      "area": "5.12",
+      "requester": "سازمان فاوا",
+      "subject": "اطلاع رسانی",
+      "description": "فیبرنوری",
+      "receiver": "سازمان فاوا",
+      "printDate": "1405/07/20",
+      "shomarename": "نامه ندارد",
+      "tarikhesabt": ""
+    },
+    {
+      "length": "3.2",
+      "width": "1.6",
+      "quantity": "4",
+      "area": "20.48",
+      "requester": "سازمان آرامستان ها",
+      "subject": "تصویر شهدا",
+      "description": "",
+      "receiver": "سازمان آرامستان ها",
+      "printDate": "1405/07/20",
+      "shomarename": "نامه ندارد",
+      "tarikhesabt": ""
+    },
+    {
+      "length": "5",
+      "width": "1.6",
+      "quantity": "5",
+      "area": "40.00",
+      "requester": "سازمان آرامستان ها",
+      "subject": "تصویر شهدا",
+      "description": "",
+      "receiver": "سازمان آرامستان ها",
+      "printDate": "1405/07/20",
+      "shomarename": "نامه ندارد",
+      "tarikhesabt": ""
+    },
+    {
+      "length": "3.2",
+      "width": "2.6",
+      "quantity": "1",
+      "area": "8.32",
+      "requester": "سازمان آرامستان ها",
+      "subject": "تصویر شهدا",
+      "description": "",
+      "receiver": "سازمان آرامستان ها",
+      "printDate": "1405/07/21",
+      "shomarename": "نامه ندارد",
+      "tarikhesabt": ""
+    },
+    {
+      "length": "3.2",
+      "width": "1.6",
+      "quantity": "1",
+      "area": "5.12",
+      "requester": "منطقه 8",
+      "subject": "اخطار به مالک",
+      "description": "",
+      "receiver": "منطقه 8",
+      "printDate": "1405/07/21",
+      "shomarename": "نامه ندارد",
+      "tarikhesabt": ""
+    },
+    {
+      "length": "4.2",
+      "width": "3.2",
+      "quantity": "2",
+      "area": "26.88",
+      "requester": "روابط عمومی",
+      "subject": "تمثال مقام معظم رهبری",
+      "description": "",
+      "receiver": "روابط عمومی",
+      "printDate": "1405/07/21",
+      "shomarename": "نامه ندارد",
+      "tarikhesabt": ""
     }
   ],
   "inputData": [
@@ -4767,11 +4897,11 @@
       "supplier": "چاپ و تبلیغات پیکاسو"
     }
   ],
-  "backupDate": "2026-10-07T06:13:47.408Z",
+  "backupDate": "2026-10-13T08:38:33.207Z",
   "stats": {
-    "totalOutput": "15250.4",
+    "totalOutput": "15551.3",
     "totalInput": "15325.0",
-    "totalBanners": "1724",
-    "inventory": "74.6"
+    "totalBanners": "1752",
+    "inventory": "-226.3"
   }
 }
