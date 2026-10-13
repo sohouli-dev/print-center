@@ -137,10 +137,7 @@
         0 8px 32px rgba(0, 0, 0, 0.25),
         inset 0 1px 1px rgba(255,255,255,0.2);
 
-    /* جابه‌جایی به راست */
-    transform: translateX(480px);
-
-    /* انیمیشن نرم */
+      /* انیمیشن نرم */
     transition: all 0.3s ease;
     animation: loginFadeUp 1s ease;
     position: relative;
@@ -175,7 +172,7 @@
 }
 
        
-       /* لاگین کارت قبلیر  .login-card {
+       /* لاگین کارت قبلی  .login-card {
             background: rgba(255, 255, 255, 0.95);
             border-radius: 15px;
             box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
@@ -854,7 +851,7 @@ body.archive-mode button[onclick*="clearAllData"] {
                     <i class="fas fa-trash me-1"></i> حذف داده‌ها
                 </button>
                 <button class="btn btn-secondary btn-action" onclick="showArchiveModal()">
-                    <i class="fas fa-archive me-1"></i> مشاهده بیلان بایگانی شده
+                    <i class="fas fa-archive me-1"></i> مشاهده آرشیو بیلان عملکرد
                 </button>
             </div>
         </div>
@@ -972,7 +969,7 @@ body.archive-mode button[onclick*="clearAllData"] {
         <div class="modal-dialog modal-sm">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">مشاهده بیلان بایگانی شده</h5>
+                    <h5 class="modal-title">مشاهده آرشیو بیلان عملکرد</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                 </div>
                 <div class="modal-body">
@@ -1959,7 +1956,7 @@ function enableArchiveMode(year) {
         banner.id = 'archiveBanner';
         document.body.prepend(banner);
     }
-    banner.textContent = `داده های آرشیو بیلان عملکرد سال ${year}لطفاً برای استفاده از آخرین بروز رسانی داده ها از برنامه خارج شده و مجدداً وارد شوید / فقط قابل جستجو، مشاهده و گزارش گیری هستند`;
+    banner.textContent = `داده های آرشیو بیلان عملکرد سال ${year} فقط قابل جستجو، مشاهده و گزارش گیری هستند لطفاً برای استفاده از آخرین بروز رسانی داده ها از برنامه خارج شده و مجدداً وارد شوید`;
 }
 
 // جلوگیری از ویرایش جدول‌ها با صفحه‌کلید در حالت فقط‌خواندنی
@@ -1972,7 +1969,7 @@ document.addEventListener('focusin', (e) => {
 
 async function loadArchive() {
     const year = document.getElementById('archiveYear').value;
-    if (!confirm(`آیا می‌خواهید بیلان بایگانی شده سال ${year} را مشاهده کنید؟\nداده‌های فعلی پاک خواهند شد!`)) return;
+    if (!confirm(`آیا می‌خواهید آرشیو بیلان عملکرد سال ${year} را مشاهده کنید؟\nداده‌های فعلی پاک خواهند شد!`)) return;
     try {
         const data = archivesData && archivesData[year];
         if (!data) { alert('فایل بایگانی یافت نشد'); return; }
@@ -1986,7 +1983,7 @@ async function loadArchive() {
             localStorage.setItem('data_version', String(data.version));
             bootstrap.Modal.getInstance(document.getElementById('archiveModal')).hide();
             enableArchiveMode(year);
-            alert(`بیلان بایگانی شده سال ${year} بارگذاری شد`);
+            alert(`آرشیو بیلان عملکرد سال ${year} بارگذاری شد`);
         } else {
             alert('فایل بایگانی نامعتبر است');
         }
