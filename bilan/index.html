@@ -146,6 +146,8 @@
     position: relative;
     z-index: 1;
 }
+.login-card:hover {
+    transform: translateX(120px) translateY(-4px);
 
     box-shadow:
         0 15px 40px rgba(0, 0, 0, 0.35),
@@ -528,6 +530,34 @@
   margin-top: 3px;
 }
 /* ===== پایان پنل تنظیم ابعاد ===== */
+
+/* حالت فقط‌خواندنی بیلان بایگانی شده */
+body.archive-mode #outputTableBody,
+body.archive-mode #inputTableBody,
+body.archive-mode button[onclick*="addOutputRow"],
+body.archive-mode button[onclick*="repeatLastOutputRow"],
+body.archive-mode button[onclick*="removeOutputRow"],
+body.archive-mode button[onclick*="saveOutputData"],
+body.archive-mode button[onclick*="addInputRow"],
+body.archive-mode button[onclick*="repeatLastInputRow"],
+body.archive-mode button[onclick*="removeInputRow"],
+body.archive-mode button[onclick*="saveInputData"],
+body.archive-mode button[onclick*="backupData"],
+body.archive-mode button[onclick*="restoreData"],
+body.archive-mode button[onclick*="clearAllData"] {
+    pointer-events: none;
+    opacity: 0.6;
+}
+#archiveBanner {
+    position: sticky;
+    top: 0;
+    z-index: 1050;
+    background: #b45309;
+    color: #fff;
+    text-align: center;
+    padding: 8px;
+    font-family: Vazirmatn, sans-serif;
+}
     </style>
 </head>
 <body>
@@ -846,7 +876,7 @@
    <span class="text-muted glow-white"><small>ارسال پیام</small></span>
   </a>
 </h5>
-    <h6 class="text-primary">سیستم بیلان عملکرد مرکز چاپ و نشر - نسخه 02 آنلاین</h6>
+    <h6 class="text-primary">سیستم بیلان عملکرد مرکز چاپ و نشر - نسخه 03 آفلاین</h6>
     <p class="text-primary glow-black">
         <small>تمام داده‌ها در این مرورگر ذخیره می‌شود لذا برای اطمینان از حفظ داده ها از دکمه ی "پشتیبان گیری" استفاده نمایید</small>
     </p>
@@ -951,7 +981,6 @@
                 <div class="modal-body">
                     <label class="form-label">انتخاب سال:</label>
                     <select id="archiveYear" class="form-select">
-                        <option value="1404">1404</option>
                     </select>
                 </div>
                 <div class="modal-footer">
@@ -1024,13 +1053,21 @@
 
     <script>
 // سیستم احراز هویت
-document.getElementById('loginForm').addEventListener('submit', function(e) {
+// هش SHA-256 رمز عبور
+const PASSWORD_HASH = 'f4e9a96d6be0a593bb583bc38be76b6f32f80ce0bc302cbc1622e4d7e56bf2f4';
+
+async function sha256(text) {
+    const buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(text));
+    return Array.from(new Uint8Array(buf)).map(b => b.toString(16).padStart(2, '0')).join('');
+}
+
+document.getElementById('loginForm').addEventListener('submit', async function(e) {
     e.preventDefault();
     
     const username = document.getElementById('username').value;
     const password = document.getElementById('password').value;
     
-    if (username === 'markazchap' && password === 'parham') {
+    if (username === 'markazchap' && await sha256(password) === PASSWORD_HASH) {
         localStorage.setItem('userLoggedIn', 'true');
         document.getElementById('loginSection').style.display = 'none';
         document.getElementById('mainContent').classList.add('active');
@@ -1893,18 +1930,55 @@ function handleRestoreFile(event) {
 }
 
 // توابع بیلان بایگانی شده
-function showArchiveModal() {
+let archivesData = null;
+
+async function showArchiveModal() {
+    try {
+        const res = await fetch(`archives.json?t=${Date.now()}`);
+        if (!res.ok) { alert('فایل بایگانی یافت نشد'); return; }
+        archivesData = await res.json();
+    } catch (error) {
+        alert('خطا در خواندن فایل بایگانی');
+        return;
+    }
+    const select = document.getElementById('archiveYear');
+    select.innerHTML = '';
+    Object.keys(archivesData).forEach(year => {
+        const option = document.createElement('option');
+        option.value = year;
+        option.textContent = year;
+        select.appendChild(option);
+    });
     const modal = new bootstrap.Modal(document.getElementById('archiveModal'));
     modal.show();
 }
+
+// فعال‌سازی حالت فقط‌خواندنی
+function enableArchiveMode(year) {
+    document.body.classList.add('archive-mode');
+    let banner = document.getElementById('archiveBanner');
+    if (!banner) {
+        banner = document.createElement('div');
+        banner.id = 'archiveBanner';
+        document.body.prepend(banner);
+    }
+    banner.textContent = `در حال مشاهده بیلان بایگانی شده سال ${year} (فقط خواندنی) - برای بازگشت به داده‌های فعلی خارج شده و دوباره وارد شوید`;
+}
+
+// جلوگیری از ویرایش جدول‌ها با صفحه‌کلید در حالت فقط‌خواندنی
+document.addEventListener('focusin', (e) => {
+    if (document.body.classList.contains('archive-mode') &&
+        e.target.closest('#outputTableBody, #inputTableBody')) {
+        e.target.blur();
+    }
+});
 
 async function loadArchive() {
     const year = document.getElementById('archiveYear').value;
     if (!confirm(`آیا می‌خواهید بیلان بایگانی شده سال ${year} را مشاهده کنید؟\nداده‌های فعلی پاک خواهند شد!`)) return;
     try {
-        const res = await fetch(`archive_backup_${year}.json?t=${Date.now()}`);
-        if (!res.ok) { alert('فایل بایگانی یافت نشد'); return; }
-        const data = await res.json();
+        const data = archivesData && archivesData[year];
+        if (!data) { alert('فایل بایگانی یافت نشد'); return; }
         if (Array.isArray(data.outputData) && Array.isArray(data.inputData)) {
             bannerSystem.outputData = data.outputData;
             bannerSystem.inputData = data.inputData;
@@ -1914,6 +1988,7 @@ async function loadArchive() {
             // ثبت نسخه بایگانی تا پس از ورود مجدد، latest_backup.json جایگزین شود
             localStorage.setItem('data_version', String(data.version));
             bootstrap.Modal.getInstance(document.getElementById('archiveModal')).hide();
+            enableArchiveMode(year);
             alert(`بیلان بایگانی شده سال ${year} بارگذاری شد`);
         } else {
             alert('فایل بایگانی نامعتبر است');
