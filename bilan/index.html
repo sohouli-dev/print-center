@@ -828,6 +828,9 @@
                 <button class="btn btn-danger btn-action" onclick="bannerSystem.clearAllData()">
                     <i class="fas fa-trash me-1"></i> حذف داده‌ها
                 </button>
+                <button class="btn btn-secondary btn-action" onclick="showArchiveModal()">
+                    <i class="fas fa-archive me-1"></i> مشاهده بیلان بایگانی شده
+                </button>
             </div>
         </div>
 
@@ -934,6 +937,28 @@
                     <button type="button" class="btn btn-warning" onclick="resetFilter()">پاک کردن فیلتر</button>
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">انصراف</button>
                     <button type="button" class="btn btn-primary" onclick="applyFilter()">اعمال فیلتر</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- مودال بیلان بایگانی شده -->
+    <div class="modal fade" id="archiveModal" tabindex="-1">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">مشاهده بیلان بایگانی شده</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <label class="form-label">انتخاب سال:</label>
+                    <select id="archiveYear" class="form-select">
+                        <option value="1404">1404</option>
+                    </select>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">انصراف</button>
+                    <button type="button" class="btn btn-primary" onclick="loadArchive()">مشاهده</button>
                 </div>
             </div>
         </div>
@@ -1867,6 +1892,37 @@ function handleRestoreFile(event) {
     
     // پاک کردن مقدار input برای امکان انتخاب مجدد همان فایل
     event.target.value = '';
+}
+
+// توابع بیلان بایگانی شده
+function showArchiveModal() {
+    const modal = new bootstrap.Modal(document.getElementById('archiveModal'));
+    modal.show();
+}
+
+async function loadArchive() {
+    const year = document.getElementById('archiveYear').value;
+    if (!confirm(`آیا می‌خواهید بیلان بایگانی شده سال ${year} را مشاهده کنید؟\nداده‌های فعلی پاک خواهند شد!`)) return;
+    try {
+        const res = await fetch(`archive_backup_${year}.json?t=${Date.now()}`);
+        if (!res.ok) { alert('فایل بایگانی یافت نشد'); return; }
+        const data = await res.json();
+        if (Array.isArray(data.outputData) && Array.isArray(data.inputData)) {
+            bannerSystem.outputData = data.outputData;
+            bannerSystem.inputData = data.inputData;
+            bannerSystem.recalculateAllAreas();
+            bannerSystem.saveData();
+            bannerSystem.init();
+            // ثبت نسخه بایگانی تا پس از ورود مجدد، latest_backup.json جایگزین شود
+            localStorage.setItem('data_version', String(data.version));
+            bootstrap.Modal.getInstance(document.getElementById('archiveModal')).hide();
+            alert(`بیلان بایگانی شده سال ${year} بارگذاری شد`);
+        } else {
+            alert('فایل بایگانی نامعتبر است');
+        }
+    } catch (error) {
+        alert('خطا در خواندن فایل بایگانی');
+    }
 }
 
 /// مقداردهی اولیه سیستم
