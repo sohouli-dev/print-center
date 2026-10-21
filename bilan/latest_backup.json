@@ -1,6 +1,6 @@
 {
-  "version": 3,
-  "userPrintData":[14050727],
+  "version": 4,
+  "userPrintData":[14050728],
   "outputData": [
     {
       "length": "4.4",
@@ -5283,49 +5283,49 @@
     {
       "length": "50",
       "width": "2.6",
-      "quantity": "1",
-      "area": "130.00",
+      "quantity": "2",
+      "area": "260.00",
       "receiveDate": "1405/06/14",
       "supplier": "چاپ و تبلیغات پیکاسو"
     },
     {
       "length": "50",
       "width": "2.6",
-      "quantity": "1",
-      "area": "130.00",
+      "quantity": "3",
+      "area": "390.00",
       "receiveDate": "1405/06/15",
       "supplier": "چاپ و تبلیغات پیکاسو"
     },
     {
       "length": "50",
       "width": "2.6",
-      "quantity": "1",
-      "area": "130.00",
+      "quantity": "4",
+      "area": "520.00",
       "receiveDate": "1405/06/16",
       "supplier": "چاپ و تبلیغات پیکاسو"
     },
     {
       "length": "50",
       "width": "2.6",
-      "quantity": "2",
-      "area": "260.00",
+      "quantity": "4",
+      "area": "520.00",
       "receiveDate": "1405/06/17",
       "supplier": "چاپ و تبلیغات پیکاسو"
     },
     {
       "length": "50",
       "width": "2.6",
-      "quantity": "2",
-      "area": "260.00",
+      "quantity": "4",
+      "area": "520.00",
       "receiveDate": "1405/06/18",
       "supplier": "چاپ و تبلیغات پیکاسو"
     }
   ],
-  "backupDate": "2026-10-21T07:07:10.248Z",
+  "backupDate": "2026-10-21T07:13:41.192Z",
   "stats": {
     "totalOutput": "16871.6",
-    "totalInput": "15715.0",
-    "totalBanners": "1851",
-    "inventory": "-1156.6"
+    "totalInput": "17015.0",
+    "totalBanners": "1861",
+    "inventory": "143.4"
   }
 }
